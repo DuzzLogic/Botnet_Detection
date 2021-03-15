@@ -1,3 +1,22 @@
+from keras.engine.topology import Layer
+from keras import initializers as initializers, regularizers, constraints
+from keras.callbacks import Callback
+from keras import backend as K
+from keras.models import Model
+
+import pandas as pd
+import numpy as np
+from google.colab import files
+import tensorflow as tf
+from tensorflow import keras
+from keras.preprocessing.text import Tokenizer
+from keras.layers import Dense, Dropout, LSTM, Bidirectional, Embedding, Input, GRU, TimeDistributed
+from keras.models import Sequential
+from sklearn.model_selection import train_test_split, ShuffleSplit
+from sklearn.metrics import confusion_matrix
+from imblearn.under_sampling import RandomUnderSampler
+from imblearn.over_sampling import RandomOverSampler
+
 # Se calculan las metricas de interes a partir de las predicciones y los valores reales
 def calculate_metrics(prediction, y_test):
   cm = confusion_matrix(y_test, prediction)

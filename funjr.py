@@ -6,7 +6,7 @@ from keras.models import Model
 
 import pandas as pd
 import numpy as np
-from google.colab import files
+#from google.colab import files
 import tensorflow as tf
 from tensorflow import keras
 from keras.preprocessing.text import Tokenizer
